@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">FormStateTest</string>
+    <string name="firstName">First Name*</string>
+    <string name="lastName">Last Name*</string>
+    <string name="email">E-Mail*</string>
+    <string name="dob">Date Of Birth*</string>
+    <string name="dformat">DD/MM/YYYY</string>
+    <string name="nationality">Nationality*</string>
+    <string name="country">Country of Residence*</string>
+    <string name="mobile">Mobile no.(Optional)</string>
+    <string name="createBtn">Create My Account Now</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+
+
+    <string name="error_firstname">First Name Required!</string>
+    <string name="error_lastname">Last Name Required!</string>
+    <string name="error_mail">E-Mail Name Required!</string>
+
+    <string name="travel_welcome">Welcome to \nReady To Travel</string>
+    <string name="travel_sub">Sign up with Facebook for the most\nfulfilling trip planning with us</string>
+    <string name="login_fb">Log in with Facebook</string>
+    <string name="login_mail">Log in with email address</string>
+    <string name="create_acc">Create a new account</string>
+
+    <string name="form_title">Almost there!</string>
+    <string name="form_subtitle">Complete the form below to create \nyour Ready To Travel Account</string>
+    <string name="mandate">*Mandatory</string>
+</resources>
