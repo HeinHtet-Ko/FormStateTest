@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,54 +24,50 @@
 
         <TextView
             android:id="@+id/form_title_text"
-            android:fontFamily="@font/chivobold"
-            android:textSize="20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/form_title"
             android:layout_marginTop="@dimen/margin_20"
-            app:layout_constraintTop_toBottomOf="@id/back_btn"
+            android:fontFamily="@font/chivobold"
+            android:text="@string/form_title"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@id/leftGuide"
-            />
+            app:layout_constraintTop_toBottomOf="@id/back_btn" />
 
         <TextView
             android:id="@+id/form_title_subtext"
-            android:fontFamily="@font/chivoregular"
-            android:textSize="13sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/form_subtitle"
             android:layout_marginTop="@dimen/margin_10"
-            app:layout_constraintTop_toBottomOf="@id/form_title_text"
+            android:fontFamily="@font/chivoregular"
+            android:text="@string/form_subtitle"
+            android:textSize="13sp"
             app:layout_constraintStart_toStartOf="@id/leftGuide"
-            />
+            app:layout_constraintTop_toBottomOf="@id/form_title_text" />
 
         <TextView
             android:id="@+id/form_title_mandate"
-            android:textSize="12sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/mandate"
             android:layout_marginTop="@dimen/margin_10"
-            app:layout_constraintTop_toBottomOf="@id/form_title_subtext"
+            android:text="@string/mandate"
+            android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@id/leftGuide"
-            />
-
-
+            app:layout_constraintTop_toBottomOf="@id/form_title_subtext" />
 
 
         <LinearLayout
-            android:background="@color/white"
+            android:id="@+id/formLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/margin_10"
-            app:layout_constraintTop_toBottomOf="@id/form_title_mandate"
             android:layout_marginTop="@dimen/margin_30"
-            android:orientation="vertical">
+            android:background="@color/white"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/form_title_mandate">
 
             <com.google.android.material.textfield.TextInputLayout
+
                 style="@style/TextInputLayoutStyle"
-                >
+               >
 
                 <com.google.android.material.textfield.TextInputEditText
 
@@ -79,8 +76,7 @@
                     android:hint="@string/firstName" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/TextInputLayoutStyle">
+            <com.google.android.material.textfield.TextInputLayout style="@style/TextInputLayoutStyle">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/lastName_field"
@@ -88,15 +84,14 @@
                     android:hint="@string/lastName" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/TextInputLayoutStyle">
+            <com.google.android.material.textfield.TextInputLayout style="@style/TextInputLayoutStyle">
 
                 <com.google.android.material.textfield.TextInputEditText
 
                     android:id="@+id/mail_field"
                     style="@style/TextInputExitTextStyle"
-                    android:inputType="textEmailAddress"
-                    android:hint="@string/email" />
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
@@ -104,48 +99,47 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/TextInputLayoutStyle"
-                    android:layout_width="170dp"
-                    >
+                    android:layout_width="170dp">
 
                     <com.google.android.material.textfield.TextInputEditText
 
                         android:id="@+id/dob_field"
                         style="@style/TextInputExitTextStyle"
                         android:layout_width="match_parent"
-                        android:text="@string/dformat"
-                        android:drawableEnd="@drawable/dob"
                         android:clickable="false"
+                        android:drawableEnd="@drawable/dob"
                         android:focusable="false"
                         android:hint="@string/dob"
-                        />
+                        android:text="@string/dformat" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <LinearLayout
-                    android:layout_gravity="center_vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:orientation="horizontal"
-                    android:background="@drawable/linearback">
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/linearback"
+                    android:orientation="horizontal">
+
                     <TextView
                         android:id="@+id/female_option"
-                        android:text="Female"
-                        style="@style/GenderTextButtonStyle"/>
+                        style="@style/GenderTextButtonStyle"
+                        android:text="Female" />
+
                     <TextView
 
                         android:id="@+id/male_option"
-                        android:text="Male"
                         style="@style/GenderTextButtonStyle"
-                        />
+                        android:text="Male" />
 
                 </LinearLayout>
 
 
             </LinearLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/TextInputLayoutStyle">
+            <com.google.android.material.textfield.TextInputLayout style="@style/TextInputLayoutStyle">
 
                 <com.google.android.material.textfield.TextInputEditText
 
@@ -155,8 +149,7 @@
                     android:hint="@string/nationality" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/TextInputLayoutStyle">
+            <com.google.android.material.textfield.TextInputLayout style="@style/TextInputLayoutStyle">
 
                 <com.google.android.material.textfield.TextInputEditText
 
@@ -166,24 +159,20 @@
                     android:hint="@string/country" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/TextInputLayoutStyle"
-                >
+            <com.google.android.material.textfield.TextInputLayout style="@style/TextInputLayoutStyle">
 
                 <com.google.android.material.textfield.TextInputEditText
 
                     android:id="@+id/phone_field"
-                    android:hint="@string/mobile"
-                    android:inputType="phone"
                     style="@style/TextInputExitTextStyle"
-                    />
+                    android:hint="@string/mobile"
+                    android:inputType="phone" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/createAccBtn"
                 style="@style/ButtonStyle"
-                android:text="@string/createBtn"
-                />
+                android:text="@string/createBtn" />
         </LinearLayout>
 
         <androidx.constraintlayout.widget.Guideline
@@ -194,12 +183,22 @@
             app:layout_constraintGuide_begin="20dp" />
 
         <ImageView
+
+            android:paddingBottom="50dp"
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="65dp"
+            app:layout_constraintBottom_toTopOf="@+id/formLayout"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/formLayout"
             app:srcCompat="@drawable/guitar" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guitarguide"
+            app:layout_constraintTop_toTopOf="@id/formLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
