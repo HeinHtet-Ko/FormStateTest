@@ -25,8 +25,8 @@ import kotlin.time.Duration.Companion.days
 
 class FragmentCreate:Fragment(R.layout.fragment_create) {
 
-    var _binding:FragmentCreateBinding? = null
-    val binding get() = _binding!!
+    private var _binding:FragmentCreateBinding? = null
+    private val binding get() = _binding!!
 
     lateinit var viewModel: AccCreateViewModel
 
@@ -53,23 +53,23 @@ class FragmentCreate:Fragment(R.layout.fragment_create) {
         }
 
         binding.firstNameField.addTextChangedListener {
-            viewModel.firstName.value = it.toString()
+            viewModel.firstName.value = it.toString().trim()
         }
 
         binding.lastNameField.addTextChangedListener {
-            viewModel.lastName.value = it.toString()
+            viewModel.lastName.value = it.toString().trim()
         }
 
         binding.mailField.addTextChangedListener {
-            viewModel.email.value = it.toString()
+            viewModel.email.value = it.toString().trim()
         }
 
         binding.countryField.addTextChangedListener {
-            viewModel.country.value = it.toString()
+            viewModel.country.value = it.toString().trim()
         }
 
         binding.nationalityField.addTextChangedListener {
-            viewModel.nationality.value = it.toString()
+            viewModel.nationality.value = it.toString().trim()
         }
 
         binding.dobField.setOnClickListener {
@@ -122,7 +122,6 @@ class FragmentCreate:Fragment(R.layout.fragment_create) {
 
 
         }
-
 
         binding.createAccBtn.setOnClickListener {
 

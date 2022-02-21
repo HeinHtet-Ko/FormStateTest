@@ -35,7 +35,7 @@ class AccCreateViewModel:ViewModel() {
         }
     }
 
-    fun valid() {
+    private fun validate() {
         viewModelScope.launch {
 
             if (firstName.value.isBlank())
@@ -72,7 +72,7 @@ class AccCreateViewModel:ViewModel() {
     fun onCreateAcc(onSuccess:()->Unit,onError:(String)->(Unit))
     {
 
-        valid()
+        validate()
         if (isValid.value) onSuccess.invoke()
         else errorMessage.value?.let { onError.invoke(it) }
 
